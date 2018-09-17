@@ -15,23 +15,32 @@ Here, we will present the results of a full census on all spectra from the ACE m
 The Atmospheric Chemistry Experiment (ACE) \cite{Bernath2017} \cite{Bernath2005}, launched in 2003, and its on-board infrared Fourier transform spectrometer (FTS), makes high-resolution (0.02 cm$^{-1}$) spectral measurements in solar occultation mode. The foremost goal of ACE was to achieve a thorough understanding of the chemistry underpinning the evolution of ozone in the stratosphere and upper troposphere, especially around the Arctic. Today, the ACE Science Operations Centre (SOC) processes more than 60 atmospheric constituents, an achievement that has led to many varied scientific discoveries. Along with the FTS, ACE also has a two-channel imaging camera \cite{Gilbert2007} initially designed to detect obscuring clouds. However, its sensitivity is such that PMCs cannot usually be seen. ACE traverses a low-Earth, high-inclination orbit, allowing it to probe all latitudes from the tropics to the poles. At this orientation, the orbit is repetitive on a yearly basis, meaning that coverage zones can be co-added to increase the sample size. 
 
 \section{Methods} \label{sec:methods}
-In spite of the bias of PMCs toward certain latitudes, altitudes and times of year, the entire ACE data set was searched for possible signatures. We registered a detection upon identification of the 3200 cm$^{-1}$ O-H stretch band vibrational mode, in a manner similar to Petelina and Zasetsky \cite{Petelina2009} \cite{Petelina2011}. The chosen threshold relative to the background level was $0.99$ in transmission. From February 2004 - April 2017, this search bore 1679 unique occultations, and 4109 total spectra, once the spectra at different altitudes were accounted for. Thereafter, the wavenumber range was restricted to 2800 - 3550 cm$^{-1}$ and the transmission feature fit using the T-matrix scattering code of Mishchenko and Travis \cite{Mishchenko1998}.  A monodisperse particle distribution of size 40 nm was assumed, as found by Hervig et al. \cite{Hervig2009} and the AIM/SOFIE mission. The code takes the particles to be oblate spheroids (axial ratio greater than 1). At each wavelength an attenuation cross section ($\mu$ m$^{2}$) is retrieved and supplied to the Beer-Lambert law, assuming a nominal cloud length of 100 km. 
+In spite of the bias of PMCs toward certain latitudes, altitudes and times of year, the entire ACE data set was searched for possible signatures. We registered a detection upon identification of the 3200 cm$^{-1}$ O-H stretch band vibrational mode, in a manner similar to Petelina and Zasetsky \cite{Petelina2009} \cite{Petelina2011}. The chosen threshold relative to the background level was $0.99$ in transmission. From February 2004 - July 2017, this search bore 1762 unique occultations, and 4262 total spectra, including those at different altitudes. Thereafter, the wavenumber range was restricted to 2800 - 3550 cm$^{-1}$ and the transmission feature fit using the T-matrix scattering code of Mishchenko and Travis \cite{Mishchenko1998}.  A monodisperse particle distribution of size 40 nm was assumed, as found by Hervig et al. \cite{Hervig2009} and the AIM/SOFIE mission. The code regards the particles as oblate spheroids (axial ratio greater than 1). At each wavelength an attenuation cross section ($\mu$ m$^{2}$) is calculated and supplied to the Beer-Lambert law, assuming a nominal cloud length of 100 km, in order to determine the ice particle density. 
 The parameters of interest to the present study are the cloud temperature, particle shape (given as an axial ratio (AR)) and the cloud density. Temperature and AR are inputs to the T-matrix code; therefore, a set of spectra were pre-calculated for each 0.1 increment of each variable. The density along the path length, $n$, was allowed to float between 100 - 800 cm$^{-3}$. An example non-linear least squares fit is shown in Figure \ref{fig:Fig1} for 
 \begin{figure}
 	\includegraphics{figs/exSpec}
 	\caption{An example spectrum from the ACE dataset, occultation ss48008, fit using the T-matrix code.}
 	\label{fig:Fig1}
 \end{figure}
+
 occultation ss48008, at an altitude of 90.77 km. The raw spectrum has been smoothed to a resolution of 1 cm$^{-1}$. 
+
 \begin{figure}
-	\includegraphics{figs/allHistograms}
-	\caption{Distributions of temperature, particle shape (axial ratio) and density for all ACE spectra recorded from mission start to April 2017.}
+	\includegraphics{figs/ss48008_all}
+	\caption{Spectra at four different altitudes from occultation ss48008.}
 	\label{fig:Fig2}
 \end{figure}
 
-\section{Results} \label{sec:results}
-Figure \ref{fig:Fig2} shows the distribution of the three parameters of interest across all PMC detections. The cloud temperature and axial ratio, which appear to peak at $\approx$135 K and $\approx$2.9, respectively, agree reasonably well with the findings of AIM/SOFIE \cite{Hervig2010}. The bunch-up at $\approx$150 K in $T_{\text{ice}}$ could be attributed to the theoretical limit imposed by the frost point temperature, meaning that results beyond may not be believable. Finally, the volume density exhibits an exponential drop-off as is to be expected, and peaks at values near those found by MIPAS/Envisat \cite{Garcia-Comas2016}.  
 
+\section{Results} \label{sec:results}
+The altitude of the spectrum in Figure \ref{fig:Fig1} is significantly higher than anything recorded by either MIPAS or AIM/SOFIE, which peak at 88-89 km and $\approx$87 km, respectively. Nevertheless, the validity of the detection cannot seem to be debated, given the depth of the feature. Indeed, for this occultation, there are a total of four detections at altitudes of 74.76, 80.13, 85.47 and 90.77 km. As can be seen in Figure \ref{fig:Fig2}, the strength of the vibrational mode seems to be directly proportional to the altitude.
+Figure \ref{fig:Fig3} shows the distribution of the three parameters of interest across all PMC detections. The cloud temperature and axial ratio, which appear to peak at $\approx$135 K and $\approx$2.9, respectively, agree reasonably well with the findings of AIM/SOFIE \cite{Hervig2010}. The bunch-up at $\approx$150 K in $T_{\text{ice}}$ could be attributed to the theoretical limit imposed by the frost point temperature, meaning that results beyond may not be believable. Finally, the volume density exhibits an exponential drop-off as is to be expected, and peaks at values near those found by MIPAS/Envisat \cite{Garcia-Comas2016}.  
+
+\begin{figure}
+	\includegraphics{figs/allHistograms}
+	\caption{Distributions of temperature, particle shape (axial ratio) and density for all ACE spectra recorded from mission start to July 2017.}
+	\label{fig:Fig3}
+\end{figure}
 
 
 \section{Discussion} \label{sec:disc}
